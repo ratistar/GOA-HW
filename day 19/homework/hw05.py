@@ -1,0 +1,1 @@
+# Slicing in Python allows us to access parts of a sequence (list, string, tuple, etc.)
