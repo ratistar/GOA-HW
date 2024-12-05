@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+</head>
+<body>
+
+    <h2>სარეგისტრაციო ფორმა</h2>
+
+    <form id="registrationForm">
+        <label for="firstName">name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">surname:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label>gender:</label>
+        <input type="radio" id="male" name="gender" value="მამაკაცი">
+        <label for="male">male</label>
+        <input type="radio" id="female" name="gender" value="მამაკაცი">
+        <label for="female">female</label>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = {};
+            
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            console.log("name:", data.firstName);
+            console.log("surname:", data.lastName);
+            console.log("email", data.email);
+            console.log("password:", data.password);
+            console.log("gender:", data.gender);
+        });
+    </script>
+
+</body>
+</html>
