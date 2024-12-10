@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(147, 245, 237);
+    color: white;
+}
+
+h1 {
+    color: rgb(57, 115, 238);
+}
+
+.food {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 200px;
+    color: black;
+}
+
+.food img {
+    width: 100%;
+    height: auto;
+}
+
+.food h2 {
+    color: #3498db;
+}
+
+.food p {
+    color: #60dde6;
+}
