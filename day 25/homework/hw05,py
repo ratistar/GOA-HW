@@ -1,0 +1,20 @@
+my_list = [10, 20, 30, 40, 50]
+
+user_input = int(input("Please enter a number (0-4): "))
+
+index = 0
+found = False
+
+for item in my_list:
+    if index == user_input:
+        removed_element = item
+        my_list.remove(item)
+        found = True
+        break
+    index += 1
+
+if found:
+    print("Removed element:", removed_element)
+    print("Updated list:", my_list)
+else:
+    print("The number you entered is invalid. Please enter a number between 0 and 4.")
